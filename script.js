@@ -28,53 +28,53 @@ function executeCommand() {
     let outputBGElement = document.querySelector('#output');
     
     switch (command) {
-		case "/menu":
+		case "menu":
 			outputElement.innerHTML = '<p ><a href="#" id="naoClique">/Home</a><br><a href="#" id="naoClique">/Sobre</a><br><a href="#" id="naoClique">/Contato</a><br><a href="#" id="naoClique">/cor</a></p>';
             break;
-        case "/home":
+        case "home":
             outputElement.innerHTML = '<h1>WEBSITE EM CONSTRUÇÃO</h1><p>aguarde...</p>';
             break;
-        case "/sobre":
+        case "sobre":
             outputElement.innerHTML = '<h1>EM BREVE</h1><p>fica tranquilo.</p>';
             break;
-        case "/contato":
+        case "contato":
             outputElement.innerHTML = '<p>/whatsapp</p>';
             break;
-        case "/contato/whatsapp":
+        case "contato/whatsapp":
             window.open('https://wa.me/5511997757771', '_blank');
             break;
-        case "/cor":
+        case "cor":
             outputElement.innerHTML = '<p ><a href="#" id="naoClique">/original</a><br><a href="#" id="naoClique">/pb</a><br><a href="#" id="naoClique">/black</a><br><a href="#" id="naoClique">/white</a><br><a href="#" id="naoClique">/night</a><br><a href="#" id="naoClique">/day</a><br><a href="#" id="naoClique"><--menu</a></p>';
             break;
 
 // PERSONALIZAÇÃO DE ESQUEMA DE COR
 
-        case "/pb": 
+        case "cor/pb": 
             backgroundElement.style.animationName = 'colorChangeBackPB';
             outputBGElement.style.backgroundColor = 'black';
             break;
-        case "/original":
+        case "cor/original":
             backgroundElement.style.animationName = 'colorChangeBack, colorChangeGrid';
             outputBGElement.style.backgroundColor = 'initial';
             document.documentElement.style.setProperty('--line-color1', '#da392c');
             break;
-        case "/black":
+        case "cor/black":
             backgroundElement.style.animationName = 'initial';
             backgroundElement.style.backgroundColor = 'black';
             outputBGElement.style.backgroundColor = 'initial';
             break;
-        case "/white":
+        case "cor/white":
             backgroundElement.style.animationName = 'initial';
             backgroundElement.style.backgroundColor = 'white';
             outputBGElement.style.backgroundColor = 'black';
             break;
-        case "/night":
+        case "cor/night":
             backgroundElement.style.animationName = 'initial';
             backgroundElement.style.backgroundColor = '#100f21';
             outputBGElement.style.backgroundColor = 'initial';
             document.documentElement.style.setProperty('--line-color1', '#222047');
             break;
-        case "/day":
+        case "cor/day":
             backgroundElement.style.animationName = 'initial';
             backgroundElement.style.backgroundColor = '#da392c';
             outputBGElement.style.backgroundColor = 'initial';
